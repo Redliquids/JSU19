@@ -1,12 +1,9 @@
-
-
-
 //var test = getCities();
 //console.log('test: ' + test);
 //console.log('test: ' + test[1].cityName);
 
 
-/*
+
 var showCities = new Vue({
   created() {
     fetch('https://avancera.app/cities/')
@@ -28,13 +25,6 @@ var showCities = new Vue({
   </dl>
 `
 });
-*/
-
-//var cityID = prompt('Enter City ID');
-//var cityName = prompt('Enter City Name');
-//var cityPop = prompt('Enter City Population');
-
-// id: 2a26c0ec-a79b-4f3c-8655-f9ab51b3301a
 
 function getCities() {
   fetch('https://avancera.app/cities/')
