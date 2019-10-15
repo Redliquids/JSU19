@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    -->
+        <script src="vue.js"></script>
+        <title>Dialog Ruta  </title>
+    </head>
+
+    <body>
+        <div id="app">
+            <img alt="" :src="avatar">
+            {{ message }} </br>
+            Hej {{ name }}!
+
+            <input v-on:click="onClick" type="button">
+
+            <!-- <div v-if="credits > 0">Hur mycket vill du satsa?</div> -->
+
+            <input v-bind:disabled="value === 1" v-on:click="decrease" type="button" value="-">
+            <input v-on:click="increase" type="button" value="+">
+            <div>
+              {{ value }}
+            </div>
+
+            <form @submit.prevent="onSubmit">
+                <input v-model="userName">
+                <input type="submit" value="Spela">
+            </form>
+            <div>{{ message }}</div>
+
+            <section>
+                <h1>Players</h1>
+                <ol>
+                    <li v-for="player in players">
+                    {{ player.name }}
+                    <span class="credits">{{ player.credits }} credits</span>
+                    </li>
+                </ol>
+            </section>
+
+        </div>
+        
+
+        <script src="index.js"></script>
+        <script src="vue.js"></script>
+    </body>
+</html>
