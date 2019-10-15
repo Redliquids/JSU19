@@ -9,8 +9,8 @@
 
     <body>
 
-
-        <table>
+        
+        <table id="app">
             <thead>
               <tr>
                     <th>Produkt</th>
@@ -19,25 +19,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                    <td>Jacket</td>
-                    <td>0</td>
-                    <td><input class="button" type="button" value="+"></td>
-              </tr>
-              <tr>
-                    <td>Pants</td>
-                    <td>0</td>
-                    <td><input class="button" type="button" value="+"></td>
-              </tr>
-              <tr>
-                    <td>Shoes</td>
-                    <td>0</td>
-                    <td><input class="button" type="button" value="+"></td>
+              <tr v-for="(product, index) in products">
+                    <td> {{ product.name }} </td>
+                    <td> {{ product.quantity }} </td>
+                    <td><input v-on:click="addToCart(index)" class="button" type="button" value="+"></td>
               </tr>
             </tbody>
         </table>
-        <p>Totalsumma: 0</p>
-
+        <p>Totalsumma: {{  }}</p>
+        
         
         </br>
         </br>

@@ -24,7 +24,6 @@ var kundvagn = new Vue({
 
 
 
-
 //var test = getCities();
 //console.log('test: ' + test);
 //console.log('test: ' + test[1].cityName);
