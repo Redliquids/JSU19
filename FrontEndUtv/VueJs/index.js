@@ -49,15 +49,4 @@ var app2 = new Vue({
     }
 })
 
-
-3 mest intressanta project imo
-Web Storage
-Utgiftshanterare 
-E-handel 
-
-~ Klar med Js Uppgifter, Börjat jobba med Vue,
-~ Vet inte om jag kan hålla lika högt tempo som andra men skall göra mitt bästa!
-
-
-
 */

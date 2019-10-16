@@ -2,40 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    -->
         <script src="vue.js"></script>
         <title>Dialog Ruta  </title>
     </head>
 
     <body>
-
-
-        
-
-
-    </br>
-    </br>
-    </br>
-
-        
         <table id="kundvagn">
             <thead>
-              <tr>
+                <tr>
                     <th>Produkt</th>
                     <th>Antal</th>
                     <th></th>
-              </tr>
+                </tr>
             </thead>
             <tbody>
-              <tr v-for="(product, index) in products">
+                <tr v-for="(product, index) in products">
                     <td> {{ product.name }} </td>
                     <td> {{ product.quantity }} </td>
                     <td><input v-on:click="addToCart(index)" class="button" type="button" value="+"></td>
-              </tr>
+                </tr>
             </tbody>
         </table>
         <p>Totalsumma: {{  }}</p>
 
+    </br>
+    </br>
+    </br>
+
+    <dl id="cities">
+        <template v-for="city in cities">
+            <dt> {{ cities.name }} </dt>
+            <dd> {{ cities.population }} </dd>
+        </template>
+    </dl>
 
         <!-- 
         <div id="app">

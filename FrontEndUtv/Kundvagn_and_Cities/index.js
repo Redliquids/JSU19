@@ -1,53 +1,53 @@
-//var test = getCities();
-//console.log('test: ' + test);
-//console.log('test: ' + test[1].cityName);
+/*
+var cityArr;
+getCities();
 
+*/
 
-
-var showCities = new Vue({
+var listCities = new Vue({
   created() {
     fetch('https://avancera.app/cities/')
-      .then(response => response.json())
-      .then(result => {
-        this.cities = result
-      })
+    .then((response)  => response.json())
+    .then((result) => {
+      this.cities = result // Does not assign result to city
+      console.log(result);
+      console.log(cities);
+    })
   },
-  data: { 
+  data: {
     cities: null
   },
   el: "#cities",
   template: `
   <dl id="cities">
     <template v-for"city in cities">
-        <dt> {{ cities.name }} </dt>
-        <dd> {{ cities.population }} </dd>
+        <dt> {{ city.name }} </dt>
+        <dd> {{ city.population }} </dd>
       </template>
   </dl>
 `
 });
 
+/*
 function getCities() {
   fetch('https://avancera.app/cities/')
-  .then(function (response) {
+  .then((response)  =>  {
     return response.json()
   })
-  .then(function (result) {
-    //console.log(result);
-    this.test = result;
-    for(i = 0; i < result.length; i++) {
-      console.log('Name: ' + result[i].name);
-      console.log('Population: ' + result[i].population);
-    }
-
-    return result;
+  .then((result) => {
+    this.cityArr = result;
   })
 }
+*/
 
 function deleteCity() {
 
 }
 
 
+//var cityID = prompt('Enter City ID');
+//var cityName = prompt('Enter cityName');
+//var cityPop = prompt('Enter cityPop');
 function updateCity() {
   fetch('https://avancera.app/cities/' + cityID, {
   body: JSON.stringify({ id: cityID, name: cityName, population: cityPop,}),
