@@ -9,23 +9,13 @@ var listCities = new Vue({
     fetch('https://avancera.app/cities/')
     .then((response)  => response.json())
     .then((result) => {
-      this.cities = result // Does not assign result to city
-      console.log(result);
-      console.log(cities);
+      this.cities = result
     })
   },
   data: {
     cities: null
   },
   el: "#cities",
-  template: `
-  <dl id="cities">
-    <template v-for"city in cities">
-        <dt> {{ city.name }} </dt>
-        <dd> {{ city.population }} </dd>
-      </template>
-  </dl>
-`
 });
 
 /*
