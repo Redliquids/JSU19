@@ -39,13 +39,6 @@ new Vue({
   el: "#app",
 });
 
-new Vue({
- 
-  data: {
-    
-  },
-  el: 
-});
 
 /*
 function getCities() {
