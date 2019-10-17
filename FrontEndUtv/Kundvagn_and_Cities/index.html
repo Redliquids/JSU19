@@ -33,12 +33,12 @@
 
         <br>
         <h4>Cities</h4>
-        <template v-for="city in cities" v-bind:value="city">
-            <dl>
+        <dl>
+            <template v-for="city in cities" v-bind:value="city">
                 <dt> {{ city.name }} </dt>
                 <dd> {{ city.population }} </dd>
-            </dl>
-        </template>
+            </template>
+        </dl>
     </div>
     
     </br>

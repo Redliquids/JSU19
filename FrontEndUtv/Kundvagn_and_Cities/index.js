@@ -32,7 +32,7 @@ new Vue({
         this.population = result.population;
 
         // Override Cities data with the new result.
-        //this.cities = result.cities;
+        this.cities = result;
       })
     }
   },
