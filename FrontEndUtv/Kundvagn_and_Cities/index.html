@@ -23,12 +23,18 @@
                 </tr>
             </tbody>
         </table>
-        <p>Totalsumma: {{  }}</p>
 
     </br>
-    </br>
+
+    <div id="app">
+        City Name: <input type="text" v-model="name"><br>
+        City Pop: <input type="text" v-model="population"><br>
+        <input v-on:click="addCity" class="button" type="submit"  id="add-city" value="Submit">
+    </div>
+    
     </br>
 
+    <h4>Cities</h4>
     <dl id="cities">
         <template v-for="city in cities">
             <dt> {{ city.name }} </dt>
