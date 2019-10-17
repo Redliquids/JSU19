@@ -30,17 +30,23 @@
         City Name: <input type="text" v-model="name"><br>
         City Pop: <input type="text" v-model="population"><br>
         <input v-on:click="addCity" class="button" type="submit"  id="add-city" value="Submit">
+
+        <br>
+        <h4>Cities</h4>
+        <template v-for="city in cities" v-bind:value="city">
+            <dl>
+                <dt> {{ city.name }} </dt>
+                <dd> {{ city.population }} </dd>
+            </dl>
+        </template>
     </div>
     
     </br>
 
-    <h4>Cities</h4>
-    <dl id="cities">
-        <template v-for="city in cities">
-            <dt> {{ city.name }} </dt>
-            <dd> {{ city.population }} </dd>
-        </template>
-    </dl>
+    
+    
+
+    
 
         <!-- 
         <div id="app">

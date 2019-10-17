@@ -3,7 +3,13 @@
 //var cityPop = prompt('Enter cityPop');
 
 new Vue({
+  created() {
+    fetch('https://avancera.app/cities/')
+    .then((response)  => response.json())
+    .then((result) => this.cities = result)
+  },
   data: {
+    cities: null,
     name: null,
     population: null
   },
@@ -24,24 +30,21 @@ new Vue({
         console.log(result)
         this.name = result.name;
         this.population = result.population;
+
+        // Override Cities data with the new result.
+        //this.cities = result.cities;
       })
     }
   },
-  el: "#app"
+  el: "#app",
 });
 
-var listCities = new Vue({
-  created() {
-    fetch('https://avancera.app/cities/')
-    .then((response)  => response.json())
-    .then((result) => {
-      this.cities = result
-    })
-  },
+new Vue({
+ 
   data: {
-    cities: null
+    
   },
-  el: "#cities",
+  el: 
 });
 
 /*
