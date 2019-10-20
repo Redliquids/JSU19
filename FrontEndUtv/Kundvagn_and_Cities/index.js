@@ -1,12 +1,21 @@
 Vue.component('greet', {
-  data: {},
-  template: '<div>Välkommen till Blackjack!</div>',
+  props: ['initialValue'],
+  data() { 
+    return {
+      counter: this.initialValue
+    }
+  },
+  methods: {
+    onClick() {
+      this.counter = this.counter + 1
+    }
+  },
+  template: '<div v-bind:value="counter" v-on:click="onClick">Välkommen till Blackjack!{{ \'!\'.repeat(counter) }}</div>',
 })
-// Needed to render the greet component in app
+
 new Vue({
   el: '#app'
 })
-
 
 
 new Vue({
