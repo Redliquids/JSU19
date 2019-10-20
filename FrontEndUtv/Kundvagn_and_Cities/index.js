@@ -1,6 +1,13 @@
-//var cityID = prompt('Enter City ID');
-//var cityName = prompt('Enter cityName');
-//var cityPop = prompt('Enter cityPop');
+Vue.component('greet', {
+  data: {},
+  template: '<div>Välkommen till Blackjack!</div>',
+})
+// Needed to render the greet component in app
+new Vue({
+  el: '#app'
+})
+
+
 
 new Vue({
   created() {
@@ -36,7 +43,7 @@ new Vue({
       })
     }
   },
-  el: "#app",
+  el: "#cities"
 });
 
 function deleteCity() {
