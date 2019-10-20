@@ -2,7 +2,7 @@ Vue.component('greet', {
   props: ['initialValue'],
   data() { 
     return {
-      counter: this.initialValue
+      counter: 0
     }
   },
   methods: {
@@ -10,7 +10,7 @@ Vue.component('greet', {
       this.counter = this.counter + 1
     }
   },
-  template: '<div v-bind:value="counter" v-on:click="onClick">Välkommen till Blackjack!{{ \'!\'.repeat(counter) }}</div>',
+  template: '<div v-on:click="onClick">Välkommen till Blackjack!{{ \'!\'.repeat(counter) }}</div>',
 })
 
 new Vue({
