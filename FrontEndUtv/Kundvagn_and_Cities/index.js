@@ -39,28 +39,15 @@ new Vue({
   el: "#app",
 });
 
-
-/*
-function getCities() {
-  fetch('https://avancera.app/cities/')
-  .then((response)  =>  {
-    return response.json()
-  })
-  .then((result) => {
-    this.cityArr = result;
-  })
-}
-*/
-
 function deleteCity() {
 
 }
 
-/* 
-//var cityID = prompt('Enter City ID');
-//var cityName = prompt('Enter cityName');
-//var cityPop = prompt('Enter cityPop');
 function updateCity() {
+  var cityID = prompt('Enter City ID');
+  var cityName = prompt('Enter cityName');
+  var cityPop = prompt('Enter cityPop');
+
   fetch('https://avancera.app/cities/' + cityID, {
   body: JSON.stringify({ id: cityID, name: cityName, population: cityPop,}),
   headers: {
@@ -73,7 +60,7 @@ function updateCity() {
   console.log(result)
 })
 }
-*/
+
 
 
 var kundvagn = new Vue({
