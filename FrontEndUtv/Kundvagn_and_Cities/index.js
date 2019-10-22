@@ -1,17 +1,28 @@
+
 Vue.component('greet', {
-  props: ['initialValue'],
-  data() { 
-    return {
-      counter: 0
-    }
-  },
-  methods: {
-    onClick() {
-      this.counter = this.counter + 1
-    }
-  },
-  template: '<div v-on:click="onClick">Välkommen till Blackjack!{{ \'!\'.repeat(counter) }}</div>',
+  props: ["name"],
+  template: "<div>Välkommen till Blackjack, {{name}}!</div>"
 })
+
+// Vue.component('greet', {
+//   props: ["name"],
+//  template: "<div>välkommen till Blackjack,{{name}}!<div>"
+//  };
+
+// Vue.component('greet', {
+//   props: ['initialValue'],
+//   data() { 
+//     return {
+//       counter: 0
+//     }
+//   },
+//   methods: {
+//     onClick() {
+//       this.counter = this.counter + 1
+//     }
+//   },
+//   template: '<div v-on:click="onClick">Välkommen till Blackjack!{{ \'!\'.repeat(counter) }}</div>',
+// })
 
 new Vue({
   el: '#app'
