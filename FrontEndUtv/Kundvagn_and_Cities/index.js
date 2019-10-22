@@ -1,7 +1,16 @@
 
+Vue.component('controls', {
+  
+})
+
 Vue.component('greet', {
-  props: ["name"],
-  template: "<div>Välkommen till Blackjack, {{name}}!</div>"
+  props: {
+    playerName: {
+      type: String,
+      default: "Player"
+    }
+  },
+  template: '<div>Välkommen till Blackjack, {{playerName}}!</div>'
 })
 
 // Vue.component('greet', {
